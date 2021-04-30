@@ -1,12 +1,19 @@
-.showResults{
-    padding-top: 20px;
-}
+
 
 .grid-container {
     --minimumColumnWidth: 160px;
     grid-gap: 24px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(var(--minimumColumnWidth), 1fr));
+}
+
+.card{
+    border:white;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 0.5rem 0rem;
 }
 
 .labelResultados {

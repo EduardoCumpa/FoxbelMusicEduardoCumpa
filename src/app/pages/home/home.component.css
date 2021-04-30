@@ -1,2 +1,38 @@
+*{
+  overflow: hidden;
+}
 
+main {
+  display: grid;
+  color: gray;
+  height: 100vh;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 1fr 70px;
+  grid-template-areas: "menu content content" "footer footer footer"
+}
 
+.menu {
+  grid-area: menu;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: #662323;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+}
+
+.content {
+  grid-area: content;
+  overflow-y: scroll;
+  padding: 2rem 4rem;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #282828;
+  height: 100px;
+}

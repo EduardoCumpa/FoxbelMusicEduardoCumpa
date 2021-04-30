@@ -12,7 +12,7 @@ export class SearchMusicService {
   public infoSong: Song | undefined;
   public isPlayingAudio: boolean = false;
   public reproducir: HTMLAudioElement;
-  public albumCover:string= '../../../assets/images/no_music.png';
+  public albumCover:string= '../../../assets/images/no_music100x100.png';
 
   constructor(private http: HttpClient) {
     this.reproducir = new Audio();

@@ -1,29 +1,37 @@
-<div class="row music_player_container">
-    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 d-none d-sm-block">
-        <img class="album_photo" src="{{_searchMusicService.infoSong?.album?.cover_medium! != undefined ? _searchMusicService.infoSong?.album?.cover_medium! : _searchMusicService.albumCover}}" alt="album_photo">     
+<div class="first-section">
+    <div>
+        <img width="100px"
+            src="{{_searchMusicService.infoSong?.album?.cover_medium! != undefined ? _searchMusicService.infoSong?.album?.cover_medium! : _searchMusicService.albumCover}}"
+            alt="album_photo">
     </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 d-none d-sm-block">
-        <p class="songTitle">{{_searchMusicService.infoSong?.title!}}</p>
-        <p class="songDescription">{{_searchMusicService.infoSong?.artist?.name! }} -
-            {{_searchMusicService.infoSong?.album?.title!}}</p>
+    <div>
+        <span class="songTitle"><a>{{_searchMusicService.infoSong?.title!}}</a></span>
+        <span class="songDescription"><a>{{_searchMusicService.infoSong?.artist?.name! }} -
+                {{_searchMusicService.infoSong?.album?.title!}}</a></span>
     </div>
+</div>
 
-    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-4 col-4">
-        <fa-icon class="faIcon backward" [icon]="stepBackwardIcon"></fa-icon>
+<div class="second-section">
+    <div class="player-controls">
+        <div class="back">
+            <fa-icon class="faIcon" [icon]="stepBackwardIcon"></fa-icon>
+        </div>
+        <div class="play">
+            <fa-icon class="faIcon circle-icon" [icon]="!_searchMusicService.isPlayingAudio==true?playIcon:pauseIcon"
+                (click)="onPlayPause()">
+            </fa-icon>
+        </div>
+        <div class="for">
+            <fa-icon class="faIcon" [icon]="stepForwardIcon"></fa-icon>
+        </div>
     </div>
-    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-4 col-4">
-        <fa-icon class="faIcon circle-icon" [icon]="!_searchMusicService.isPlayingAudio==true?playIcon:pauseIcon" (click)="onPlayPause()">
-        </fa-icon>
-    </div>
-    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-4 col-4">
-        <fa-icon class="faIcon forward" [icon]="stepForwardIcon"></fa-icon>
-    </div>
+</div>
 
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 d-none d-sm-block">
+<div class="third-section">
+    <div class="">
         <span class="float-end">control</span>
     </div>
-    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 d-none d-sm-block">
+    <div class="">
         <fa-icon class="faIcon" [icon]="volumeUpIcon"></fa-icon>
     </div>
-
 </div>

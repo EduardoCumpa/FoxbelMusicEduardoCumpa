@@ -1,6 +1,6 @@
-<section class="showResults">
 <h3 class="labelResultados">Resultados</h3>
-<span *ngIf="_searchMusicService?.listResults == undefined">No hay resultados para mostrar, pruebe buscando un título</span>
+<span *ngIf="_searchMusicService?.listResults == undefined">No hay resultados para mostrar, pruebe buscando un
+    título</span>
 
 <div *ngIf="_searchMusicService?.listResults != undefined" class="grid-container">
     <div class="card song" *ngFor="let song of _searchMusicService?.listResults" (click)="onSendSong(song)">
@@ -15,4 +15,3 @@
         </div>
     </div>
 </div>
-</section>
