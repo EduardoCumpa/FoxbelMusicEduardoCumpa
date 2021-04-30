@@ -1,0 +1,42 @@
+* {
+    background: #EB5757;
+}
+
+.faIcon {
+    color: white;
+    font-size: clamp(1rem, 0.8846rem + 0.5128vw, 1.5rem);
+}
+
+.faIcon:hover {
+    cursor: pointer;
+}
+
+.circle-icon {
+    background: #FF7676;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    vertical-align: middle;
+    padding: 20px;
+}
+
+.backward {
+    float: right;
+}
+
+.forward {
+    float: left;
+}
+
+.songTitle {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.songDescription {
+    font-size: 12px;
+    color: #ffffff;
+}

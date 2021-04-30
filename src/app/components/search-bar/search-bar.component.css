@@ -1,0 +1,21 @@
+.search{
+    padding-bottom: 20px;
+}
+
+#search_bar {
+    border-radius: 100px;
+}
+
+.user{
+    text-align: end;
+}
+
+.userName{
+    font-size: clamp(1rem, 0.8846rem + 0.5128vw, 1.5rem);
+}
+
+.faIcon{
+    padding: 12px;
+    color: #E86060;
+    font-size: clamp(1rem, 0.8846rem + 0.5128vw, 1.5rem);
+}

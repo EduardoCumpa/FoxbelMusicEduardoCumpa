@@ -1,0 +1,41 @@
+.showResults{
+    padding-top: 20px;
+}
+
+.grid-container {
+    --minimumColumnWidth: 160px;
+    grid-gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--minimumColumnWidth), 1fr));
+}
+
+.labelResultados {
+    font-weight: bold;
+    color: #E86060;
+    font-size: clamp(1rem, 0.8846rem + 0.5128vw, 1.5rem);
+}
+
+.song {
+    width: 160px;
+}
+
+.song:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.album_photo {
+    max-width: 100%;
+    max-height: 160px;
+}
+
+.title {
+    color: #555555;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.artist {
+    color: #828282;
+    font-size: 12px;
+}

@@ -1,0 +1,13 @@
+<div class="row" *ngIf="this._searchMusicService.infoSong?.preview! != null">
+    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-1 col-xs-1 col-1 thumbnail-wrapper">
+        <img src="{{_searchMusicService.infoSong?.album?.cover_medium!}}" alt="album_photo">
+        <fa-icon class="faIcon" [icon]="!_searchMusicService.isPlayingAudio==true?playIcon:pauseIcon"
+            (click)="onPlayPause()">
+        </fa-icon>
+    </div>
+    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-1 col-xs-1 col-1">
+        <p>Título: {{_searchMusicService.infoSong?.title!}}</p>
+        <p>Álbum: {{_searchMusicService.infoSong?.album?.title!}}</p>
+        <p>Artista: {{_searchMusicService.infoSong?.artist?.name!}}</p>
+    </div>
+</div>
