@@ -20,22 +20,3 @@ Al dar clic en una canción esta se reproduce automáticamente.
 Se puede pausar/reanudar la canción.
 Se puede subir y bajar el volumen.
 Se puede mutear y desmutear el volumen.
-
-# Estructura de carpetas
-├───app
-│   ├───components
-│   │   ├───album-info
-│   │   ├───display-music
-│   │   ├───music-player
-│   │   ├───nav-menu
-│   │   └───search-bar
-│   ├───interfaces
-│   ├───pages
-│   │   └───home
-│   └───services
-├───assets
-│   ├───fonts
-│   │   └───Quicksand
-│   │       └───static
-│   └───images
-└───environments
