@@ -19,7 +19,7 @@ export class SearchMusicService {
   public albumCover: string = 'assets/images/no_music100x100.png';
   public logo: string = 'assets/images/foxbel-music.png';
 
-  isProd: boolean = true;
+  isProd: boolean = false;
 
   constructor(private http: HttpClient) {
     this.reproducir = new Audio();
