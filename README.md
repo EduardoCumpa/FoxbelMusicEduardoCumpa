@@ -1,27 +1,40 @@
 # FoxbelMusicEduardoCumpa
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.7.
+# Objetivo
+Es un proyecto de prueba para consumir la API de deezer `https://developers.deezer.com/api`
 
-## Development server
+# Tener instalado
+El proyecto fue generado con:
+ - Angular versión 11.2.7
+ - Nodejs versión 14.16.0
+ - npm versión 6.14.11
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Para ejecutar
+Para inicializar el proyecto asegurarse de haber ejecutado el comando "npm install" para descargar los paquetes de la carpeta node_modules.
+Una vez descargados los paquetes, debemos inicializar con el comando "npm start" y abrir `http://localhost:4200` (asegurarse que 4200 es el puerto en donde se ejecuta el servidor, sino cambiarlo) en una pestaña del navegador.
 
-## Code scaffolding
+# Funciones
+El proyecto lista las canciones que se asemejan al parámetro de búsqueda haciendo un GET request al endpoint `https://api.deezer.com/search?=`.
+Al dar clic en una canción esta se reproduce automáticamente.
+Se puede pausar/reanudar la canción.
+Se puede subir y bajar el volumen.
+Se puede mutear y desmutear el volumen.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Estructura de carpetas
+├───app
+│   ├───components
+│   │   ├───album-info
+│   │   ├───display-music
+│   │   ├───music-player
+│   │   ├───nav-menu
+│   │   └───search-bar
+│   ├───interfaces
+│   ├───pages
+│   │   └───home
+│   └───services
+├───assets
+│   ├───fonts
+│   │   └───Quicksand
+│   │       └───static
+│   └───images
+└───environments
