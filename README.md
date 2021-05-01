@@ -14,6 +14,7 @@ Para inicializar el proyecto asegurarse de haber ejecutado el comando "npm insta
 Una vez descargados los paquetes, debemos inicializar con el comando "npm start" y abrir `http://localhost:4200` (asegurarse que 4200 es el puerto en donde se ejecuta el servidor, sino cambiarlo) en una pestaña del navegador.
 
 # Funciones
+Es responsive.
 El proyecto lista las canciones que se asemejan al parámetro de búsqueda haciendo un GET request al endpoint `https://api.deezer.com/search?=`.
 Al dar clic en una canción esta se reproduce automáticamente.
 Se puede pausar/reanudar la canción.
