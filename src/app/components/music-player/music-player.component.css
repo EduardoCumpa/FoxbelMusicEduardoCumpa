@@ -1,3 +1,78 @@
+.player-container {
+    background: #EB5757;
+    display: grid;
+    grid-template-areas: "first second second second third"
+}
+
+.first-section {
+    grid-area: first;
+    display: grid;
+    grid-template-areas: "album info info info info info info info info info info"
+}
+
+.album {
+    grid-area: album;
+}
+
+.album-photo{
+    width: 100px;
+}
+
+.info {
+    grid-area: info;
+    align-self: center;
+}
+
+.second-section {
+    align-self: center;
+    grid-area: second;
+}
+
+.player-controls {
+    display: grid;
+    grid-template-areas: "back back play for for"
+}
+
+.back {
+    align-self: center;
+    grid-area: back;
+}
+
+.iconBack {
+    float: right;
+}
+
+.play {
+    text-align: center;
+    grid-area: play;
+}
+
+.for {
+    grid-area: for;
+    align-self: center;
+}
+
+.iconFor {
+    float: left;
+}
+
+.third-section {
+    grid-area: third;
+    display: grid;
+    grid-template-areas: "control volume";
+    align-self: center;
+}
+
+.control-volume {
+    grid-area: control;
+    align-self: center;
+}
+
+.volume {
+    grid-area: volume;
+    align-self: center;
+}
+
 .faIcon {
     color: white;
     font-size: clamp(1rem, 0.8846rem + 0.5128vw, 1.5rem);
@@ -22,9 +97,24 @@
     font-size: 14px;
     font-weight: bold;
     color: #ffffff;
+    margin-bottom: 0px;
 }
 
 .songDescription {
     font-size: 12px;
     color: #ffffff;
+    margin-bottom: 0px;
+}
+
+@media (max-width: 600px) {
+    .player-container {
+        grid-template-areas: "first first" "second third"
+    }
+    .first-section {
+       
+        grid-template-areas: "album info info info"
+    }
+    .album-photo{
+        width: 50px;
+    }
 }

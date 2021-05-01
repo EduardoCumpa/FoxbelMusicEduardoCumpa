@@ -1,4 +1,18 @@
-.photo{
+.container-album {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.background {
+    background: #A70000B2;
+}
+
+.info {
+    align-self: center;
+    padding: 10px;
+}
+
+.photo {
     width: -webkit-fill-available;
     max-width: 250px;
     max-height: 250px;
@@ -35,12 +49,35 @@
     font-weight: bold;
     color: #E86060;
     font-size: clamp(1rem, 0.8846rem + 0.5128vw, 1.5rem);
+    margin-bottom: 20px;
 }
 
-.photo{
+.photo {
     float: left;
 }
 
-.info{
+.info {
     float: left;
+}
+
+.title {
+    color: #FFFFFF;
+    font-size: clamp(1rem, 0.8846rem + 0.5128vw, 1.5rem);
+    font-weight: bold;
+}
+
+.album {
+    color: #FFFFFF;
+    font-size: clamp(1rem, 0.8846rem + 0.5128vw, 1.5rem);
+}
+
+.artist {
+    color: #FFFFFF;
+    font-size: clamp(1rem, 0.8846rem + 0.5128vw, 1.5rem);
+}
+
+@media (max-width: 600px) {
+    .container-album {
+        display: none;
+    }
 }

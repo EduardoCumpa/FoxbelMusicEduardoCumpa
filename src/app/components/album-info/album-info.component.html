@@ -1,15 +1,17 @@
+<div class="container-album">
 <h3 *ngIf="this._searchMusicService.infoSong?.preview! != null" class="labelResultados">Reproduciendo ahora...</h3>
-<div class="row" *ngIf="this._searchMusicService.infoSong?.preview! != null">
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4 col-8 thumbnail-wrapper ">
+<div class="row background" *ngIf="this._searchMusicService.infoSong?.preview! != null" style="background-image: url({{_searchMusicService.infoSong?.artist?.picture_xl!}}); background-size:100%; background-position: center">
+    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 col-12 thumbnail-wrapper ">
         <img src="{{_searchMusicService.infoSong?.album?.cover_medium!}}" alt="album_photo" class="photo">
         <fa-icon class="faIcon" [icon]="!_searchMusicService.isPlayingAudio==true?playIcon:pauseIcon"
             (click)="onPlayPause()">
         </fa-icon>
     </div>
-    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-4 col-8 ">
-        <p>Título: {{_searchMusicService.infoSong?.title!}}</p>
-        <p>Álbum: {{_searchMusicService.infoSong?.album?.title!}}</p>
-        <p>Artista: {{_searchMusicService.infoSong?.artist?.name!}}</p>
+    <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 col-12 info">
+        <p class="title">Título: {{_searchMusicService.infoSong?.title!}}</p>
+        <p class="album">Álbum: {{_searchMusicService.infoSong?.album?.title!}}</p>
+        <p class="artist">Artista: {{_searchMusicService.infoSong?.artist?.name!}}</p>
     </div>
 
+</div>
 </div>

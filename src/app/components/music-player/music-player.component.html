@@ -1,37 +1,39 @@
-<div class="first-section">
-    <div>
-        <img width="100px"
-            src="{{_searchMusicService.infoSong?.album?.cover_medium! != undefined ? _searchMusicService.infoSong?.album?.cover_medium! : _searchMusicService.albumCover}}"
-            alt="album_photo">
+<div class="player-container">
+    <div class="first-section ">
+        <div class="album">
+            <img class="album-photo"
+                src="{{_searchMusicService.infoSong?.album?.cover_medium! != undefined ? _searchMusicService.infoSong?.album?.cover_medium! : _searchMusicService.albumCover}}"
+                alt="album_photo">
+        </div>
+        <div class="info" *ngIf="this._searchMusicService.infoSong?.preview! != null">
+            <p class="songTitle">{{_searchMusicService.infoSong?.title!}}</p>
+            <p class="songDescription">{{_searchMusicService.infoSong?.artist?.name!}}</p>
+        </div>
     </div>
-    <div>
-        <span class="songTitle"><a>{{_searchMusicService.infoSong?.title!}}</a></span>
-        <span class="songDescription"><a>{{_searchMusicService.infoSong?.artist?.name! }} -
-                {{_searchMusicService.infoSong?.album?.title!}}</a></span>
-    </div>
-</div>
 
-<div class="second-section">
-    <div class="player-controls">
-        <div class="back">
-            <fa-icon class="faIcon" [icon]="stepBackwardIcon"></fa-icon>
-        </div>
-        <div class="play">
-            <fa-icon class="faIcon circle-icon" [icon]="!_searchMusicService.isPlayingAudio==true?playIcon:pauseIcon"
-                (click)="onPlayPause()">
-            </fa-icon>
-        </div>
-        <div class="for">
-            <fa-icon class="faIcon" [icon]="stepForwardIcon"></fa-icon>
+    <div class="second-section">
+        <div class="player-controls">
+            <div class="back">
+                <fa-icon class="faIcon iconBack" [icon]="stepBackwardIcon"></fa-icon>
+            </div>
+            <div class="play">
+                <fa-icon class="faIcon circle-icon" [icon]="!_searchMusicService.isPlayingAudio?playIcon:pauseIcon"
+                    (click)="onPlayPause()">
+                </fa-icon>
+            </div>
+            <div class="for">
+                <fa-icon class="faIcon iconFor" [icon]="stepForwardIcon"></fa-icon>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="third-section">
-    <div class="">
-        <span class="float-end">control</span>
-    </div>
-    <div class="">
-        <fa-icon class="faIcon" [icon]="volumeUpIcon"></fa-icon>
+    <div class="third-section">
+        <div class="control-volume">
+            <input type="range" min="0" max="100" value={{currentVolume}} (input)="valueChanged($event)">
+        </div>
+        <div class="volume">
+            <fa-icon class="faIcon" [icon]="_searchMusicService.isMute ? volumeMuteIcon : volumeUpIcon"
+                (click)="onMuteAudio()"></fa-icon>
+        </div>
     </div>
 </div>

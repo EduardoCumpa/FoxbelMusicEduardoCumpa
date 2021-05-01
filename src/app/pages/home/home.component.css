@@ -1,13 +1,9 @@
-*{
-  overflow: hidden;
-}
-
 main {
   display: grid;
   color: gray;
   height: 100vh;
   grid-template-columns: 200px 1fr;
-  grid-template-rows: 1fr 70px;
+  grid-template-rows: 1fr 100px;
   grid-template-areas: "menu content content" "footer footer footer"
 }
 
@@ -18,7 +14,7 @@ main {
   flex-direction: column;
   background: #662323;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .content {
@@ -31,8 +27,19 @@ main {
   display: none;
 }
 
-footer {
+.footer {
   grid-area: footer;
-  background-color: #282828;
-  height: 100px;
+}
+
+@media (max-width: 600px) {
+  main {
+    grid-template-rows: 1fr 110px;
+    grid-template-areas: "content content content" "footer footer footer"
+  }
+  .menu {
+    display: none;
+  }
+  .content {
+    padding: 1rem 1rem;
+  }
 }

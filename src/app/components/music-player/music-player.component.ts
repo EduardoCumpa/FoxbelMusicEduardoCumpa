@@ -15,6 +15,9 @@ export class MusicPlayerComponent implements OnInit {
   stepForwardIcon = faStepForward;
   volumeUpIcon = faVolumeUp;
   volumeMuteIcon = faVolumeMute;
+
+  currentVolume = 50;
+
   constructor(public _searchMusicService: SearchMusicService) {
   }
 
@@ -35,6 +38,22 @@ export class MusicPlayerComponent implements OnInit {
       alert("Selecciona una canción");
     }
 
+  }
+
+  valueChanged(event: any) {
+    console.log('e', event.target.value);
+    this.currentVolume = event.target.value;
+    this._searchMusicService.reproducir.volume = this.currentVolume / 100;
+  }
+
+  onMuteAudio() {
+    if (!this._searchMusicService.isMute) {
+      this._searchMusicService.isMute = true;
+      this._searchMusicService.reproducir.muted = true;
+    } else {
+      this._searchMusicService.isMute = false;
+      this._searchMusicService.reproducir.muted = false;
+    }
   }
 
 }

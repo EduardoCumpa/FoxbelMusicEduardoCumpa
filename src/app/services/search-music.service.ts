@@ -11,6 +11,7 @@ export class SearchMusicService {
   public listResults: any | undefined;
   public infoSong: Song | undefined;
   public isPlayingAudio: boolean = false;
+  isMute: boolean = false;
   public reproducir: HTMLAudioElement;
   public albumCover:string= '../../../assets/images/no_music100x100.png';
 
