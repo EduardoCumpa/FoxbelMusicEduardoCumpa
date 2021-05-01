@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchMusicService } from 'src/app/services/search-music.service';
 
 @Component({
   selector: 'app-nav-menu',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavMenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _searchMusicService: SearchMusicService) { }
 
   ngOnInit(): void {
   }
