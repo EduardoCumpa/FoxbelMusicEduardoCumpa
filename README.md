@@ -5,7 +5,7 @@ Es un proyecto de prueba para consumir la API de deezer `https://developers.deez
 
 # Tener instalado
 El proyecto fue generado con:
- - Angular versión 11.2.7
+ - Angular versión 11.2.7, actualizado a Angular 12.0.0 (16/05/2021)
  - Nodejs versión 14.16.0
  - npm versión 6.14.11
 
